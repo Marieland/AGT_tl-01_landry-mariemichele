@@ -1,0 +1,439 @@
+@font-face{
+    font-family:"Montserrat";
+    src: url(../assets/fonts/montserrat-italic-variablefont_wght-webfont.woff),
+        url(../assets/fonts/montserrat-italic-variablefont_wght-webfont.woff2),
+        url(../assets/fonts/montserrat-variablefont_wght-webfont.woff),
+        url(../assets/fonts/montserrat-variablefont_wght-webfont.woff2);
+}
+
+:root{
+    --primary-bg-color:rgb(251, 3, 168);
+    --secondary-color:rgb(112, 187, 132);
+    --light-pink:rgb(244, 140, 209);
+}
+
+html{
+    scroll-behavior: smooth;/*pour le bouton qui remonte*/
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:"Monserrat";
+    font-size: 16px;
+}
+
+/*sticky header*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--primary-bg-color);
+    background: repeating-linear-gradient(45deg, var(--light-pink), rgb(244, 93, 193)25%, var(--light-pink)60%);
+    position: fixed;
+    top:0;
+    height: 180px;/*idéalement utilser des rem pour l'accessibilité*/
+    width:100%;
+    z-index:99;
+    box-shadow: 00 10px rgba(0,0,0,0.2);
+    transition:all  300ms ease;
+}
+
+header.sticky{
+    height: 120px;
+    box-shadow: 00 5px rgba(0,0,0,0.2);
+}
+
+
+header h1{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin:0 auto;
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+}
+
+
+/*Note pour image brisée*/
+
+img:before{
+    content:"Nous sommes désolés l'image est brisée! :(";
+    background-color: var(--secondary-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*barre de navigation a-z*/
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover{
+    color:var(--secondary-color);
+    border-left: solid 2px;
+    border-right: solid 2px;
+    padding: 1rem 1rem;
+}
+
+a:focus{
+    border: solid 2px;
+    padding: 1rem;
+}
+
+
+
+h2{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.properties{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10rem;
+}
+
+.prop_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 1rem;
+    padding:1rem;
+}
+
+.prop_list  li{
+    list-style-image: url(../assets/images/flower_346167.png);
+}
+
+
+/*Exemple column : count et rule*/
+
+.column_exemple{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    column-count: 3;
+    column-rule: 2px double var(--primary-bg-color);
+
+}
+
+/*Exemple Justify-content*/
+
+.justify_exemple{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    gap:1rem;
+    padding: 1rem;
+}
+
+.justify_content{
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: var(--light-pink);
+    height: 50px;
+    width: 50px;
+}
+
+/*Exemple overflow*/
+
+.overflow_container{
+width: 200px;
+height: 100px;
+border: solid var(--primary-bg-color) 2px;
+overflow: auto; /* Permet d'ajouter la barre de défilement au besoin*/
+}
+
+.overflow_item{
+    width: 300px;
+    height: 200px;
+    background-color: var(--secondary-color);
+}
+
+
+
+
+/*Example grid*/
+.container{
+    display: grid;
+    grid-template-columns:1fr 1fr 2fr 1fr;
+    background-color:var(--secondary-color);
+    gap:1rem;
+    padding: 1rem;
+    max-width: fit-content;
+}
+
+.item{
+    display: flex;
+    height: 50px;
+    min-width: 50px;
+    background-color:var(--primary-bg-color);
+    align-items: center;
+    justify-content: center;
+}
+
+/*Bouton retour en haut de la page*/
+
+.gotopbtn{
+    position: fixed;
+    /*width: 50px;
+    height: 50px;*/
+    /*background: #27ae60;*/
+    bottom: 40px;
+    right: 40px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+/*Linear-gradient button*/
+button{
+    padding: 1em 2em;
+    background-color: #161a20;*/
+    border:none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button::after{
+    content:'';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 1000px;
+    background: red;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -1;
+
+}
+
+button:hover{
+    z-index: 0;
+    box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+}
+
+/*Filter propriétés demo*/
+.drop-shadow{
+    filter:drop-shadow(0px 50px 50px var(--primary-bg-color));
+}
+
+.grayscale{
+    filter:grayscale(200%);
+}
+
+.invert{
+    filter:invert(100%);
+}
+
+.hue_rotate{
+    filter:hue-rotate(180deg);
+}
+
+.opacity{
+    filter:opacity(90%);
+}
+
+
+details{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border:solid var(--primary-bg-color) 2px;
+    border-radius: 15px;
+    max-width: 768px;
+}
+/*animation*/
+.box{
+    margin: bottom 40px;
+    width:100px;
+    height:100px;
+    background-color: #e02020;
+    animation: example 2s ease-in-out 1s infinite alternate both;
+}
+
+@keyframes example{
+    from{
+        transform: translate(-200px, -100px) rotate(0);
+    }
+    to{
+        transform: translate(400px, 200px) rotate(360deg);
+    }
+}
+
+
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+
+
+/*Spinners*/
+.spinner-1{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 64px;
+    height: 64px;
+    border-radius:64px;
+
+}
+
+.spinner-1::before{
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    color: rgb(112, 187, 132);
+    box-shadow: inset -5px 0 0 5px currentColor;
+    clip: rect(0, 64px, 32px, o);
+    animation: rotator 1s infinite ease;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(-180deg);
+        box-shadow: inset -5px 0 0 5px currentColor;
+    }
+    50%{
+        transform: rotate(0deg);
+        box-shadow: inset -1px 0 0 1px currentColor;
+    }
+
+    100%{
+        transform: rotate(180deg);
+        box-shadow: inset -5px 0 0 5px currentColor;
+    }
+}
+
+
+/*writing-mode exemple*/
+
+.writing_exemple{
+    text-orientation: upright;
+}
+
+.writing_exemple p{
+    writing-mode: vertical-lr;
+    font-size:16px;
+    float: left;
+}
+
+/*Z-index exemple*/
+.z_index{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#z_img1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    z-index:10;
+}
+
+#z_img2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    transform:translate(30px, -40px);
+    filter: opacity(60%);
+    z-index:8;
+}
+
+#z_img3{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    transform: translate(60px, -80px);
+    filter: opacity(40%);
+    z-index:6;
+}
+
+#z_img4{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    transform: translate(90px, -120px);
+    filter: opacity(20%);
+    z-index:4;
+}
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:var(--primary-bg-color);
+    background: repeating-linear-gradient(45deg, var(--light-pink)15%, rgb(244, 93, 193)25%, var(--light-pink)60%);
+    height: 120px;/*idéalement utilser des rem pour l'accessibilité*/
+    width:100%;
+    z-index:99;
+    padding:0;
+}
+
+/*les médias queries, mobile first*/
+@media screen and (min-width:768px) {
+    header h1{
+    font-size: 2.8rem ;
+    line-height: 3.2rem;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and(min-width:1224px) {
+    
+}

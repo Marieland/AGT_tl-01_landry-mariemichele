@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="./app.js" defer></script>
+    <title>Les fonctionnalités CSS De A à Z</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Les fonctionnalités CSS De A à Z</h1>
+        <nav>
+            <ul>
+                <li><a href="#A">A</a></li>
+                <li><a href="#B">B</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#D">D</a></li>
+                <li><a href="#E">E</a></li>
+                <li><a href="#F">F</a></li>
+                <li><a href="#G">G</a></li>
+                <li><a href="#H">H</a></li>
+                <li><a href="#I">I</a></li>
+                <li><a href="#J">J</a></li>
+                <li><a href="#K">K</a></li>
+                <li><a href="#L">L</a></li>
+                <li><a href="#M">M</a></li>
+                <li><a href="#N">N</a></li>
+                <li><a href="#O">O</a></li>
+                <li><a href="#P">P</a></li>
+                <li><a href="#Q">Q</a></li>
+                <li><a href="#R">R</a></li>
+                <li><a href="#S">S</a></li>
+                <li><a href="#T">T</a></li>
+                <li><a href="#U">U</a></li>
+                <li><a href="#V">V</a></li>
+                <li><a href="#W">W</a></li>
+                <li><a href="#X">X</a></li>
+                <li><a href="#Y">Y</a></li>
+                <li><a href="#Z">Z</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="box"></div>
+        <div class="properties" id="A">
+            <img src="./assets/images/Asset 3.png">
+            <div class="prop_list">
+                <h2>A for Animation</h2>
+                <details>
+                    <summary>ease-in-out</summary>
+                    <p>Mon petit cube rouge présente une animation qui utilise plusieurs propriétés donc le transform: translate et le transform: rotate et les keyframes. Voir le code plus bas.</p>
+                    <code>
+                        .box{
+                            margin: bottom 40px;
+                            width:100px;
+                            height:100px;
+                            background-color: #e02020;
+                            animation: example 2s ease-in-out 1s infinite alternate both;
+                        }
+
+                        @keyframes example{
+                            from{
+                                transform: translate(-200px, -100px) rotate(0);
+                            }
+                            to{
+                                transform: translate(400px, 200px) rotate(360deg);
+                            }
+                        }
+                    </code>
+                </details>
+            </div>
+        </div>
+
+    <div class="properties" id="B">
+        <img src="./assets/images/Asset 4.png">
+        
+        
+        <div class="prop_list">
+            
+            <h2>B for borders </h2>
+            
+            <details>
+                <summary>Border-radius</summary>
+                <ol>
+                    <li>border-radius</li>
+                    <li>border-top-left-radius</li>
+                    <li>border-top-right-radius</li>
+                    <li>border-bottom-left-radius</li>
+                    <li>border-bottom-right-radius</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>border-image</summary>
+                <code>border-image: <'border-image-source'> || <'border-image-slice'> [ / <'border-image-width'> | / <'border-image-width'>? / <'border-image-outset'> ]? || <'border-image-repeat'></code>
+                <ol>
+                    <li>border-image-outset: Specifies the amount by which the border image area extends beyond the border box</li>
+                    <li>border-image-repeat: permet de spécifier de quelle facon l'image sera répétée. </li>
+                    <li>border-image-source:permet de spécifier ou l'emplacement de notre image.</li>
+                    <li>border-image-slice:permet de spécifier des "offsets" à l'intérieur TLBR en divisant notre image en neufs régions. </li>
+                    <li>border-image-width:permet de spécifier la largeur de la bordure.</li>
+                </ol>
+            </details>
+        </div>
+    </div>
+
+    <div class="properties" id="C">
+        <img src="./assets/images/Asset 5.png">
+        <div class="prop_list">
+            <h2>C for Columns</h2>
+            <details>
+                <summary>Columns</summary>
+                <p>Permet de spécifier la largeur des colonnes (column-width) ainsi que le nombre de colonnes(column-count) dans un multi-column layout. Voici un exemple utilisant column-count ainsi que column-rule. </p>
+                <div class="column_exemple">
+                    <h3>Columns Example</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia velit consequatur illo possimus aliquam animi, aspernatur est, quia voluptates suscipit recusandae culpa, non praesentium reprehenderit debitis ipsum laudantium autem totam.</p>
+                    <p>Simple et efficace pour un interface à colonnes multiples</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eligendi doloribus porro nam ex accusantium libero voluptatibus velit fuga autem enim, dolores repellat vel minus esse iste qui facere magnam?</p>
+                  </div>
+                  <pre>
+                    <code>
+                        .column_exemple{
+                            background-color: var(--secondary-color);
+                            padding: 1rem;
+                            column-count: 3;
+                            column-rule: 2px double var(--primary-bg-color);
+                        
+                        }                        
+                    </code>
+                </pre>
+            </details>
+        </div>
+    </div>
+
+    <div class="properties" id="D">
+        <img src="./assets/images/Asset 6.png">
+        <div class="prop_list">
+            <h2>D for Display </h2>
+            <details>
+                <summary>Grid</summary>
+
+                <div class="container">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                </div>
+
+                <pre>
+                    <code>
+                        .container{
+                            display: grid;
+                            grid-template-columns:1fr 1fr 2fr 1fr;
+                            background-color:rgb(112, 187, 132);
+                            gap:1rem;
+                            padding: 1rem;
+                            max-width: fit-content;
+                            }    
+                    </code>
+                </pre>
+
+                <ol>
+                    <li>grid-area</li>
+                    <li>grid-auto-columns</li>
+                    <li> grid-auto-flow</li>
+                    <li>grid-auto-rows</li>
+                    <li>grid-column-end</li>
+                    <li>grid-column-gap</li>
+                    <li>grid-column-start</li>
+                    <li>grid-column</li>
+                    <li>grid-gap</li>
+                    <li>grid-row-end</li>
+                    <li>grid-row-gap</li>
+                    <li>grid-row-start</li>
+                    <li>grid-row</li>
+                    <li>grid-template-areas</li>
+                    <li>grid-template-columns</li>
+                    <li>grid-template-rows</li>
+                    <li>grid-template</li>
+                </ol>
+
+            </details>
+
+            <details>
+                <summary>Flex</summary>
+                <ol>
+                    <li>align-content</li>
+                    <li>align-items</li>
+                    <li>alligh-self</li>
+                    <li>flex-basis</li>
+                    <li>flex-direction</li>
+                    <li>flex-flow</li>
+                    <li>flex-grow</li>
+                    <li>flex-shrink</li>
+                    <li>flex-wrap</li>
+                    <li>justify-content</li>
+                    <li>order</li>
+                </ol>
+            </details>
+        </div>  
+    </div>
+
+    <div class="properties" id="E">
+        <img src="./assets/images/Asset 7.png">
+        <h2>E for </h2>
+    </div>
+
+
+    <div class="properties" id="F">
+        <img class="drop-shadow" src="./assets/images/Asset 8.png">
+        <div class="prop_list">
+            <h2>F for filter</h2>
+
+            <details>
+                <summary>blur()</summary>
+                <p>Par exemple, l'image de la lettre I:</p>
+                <code>filter:blur(15px);</code>
+            </details>
+
+            <details>
+                <summary>brightness()</summary>
+            </details>
+
+            <details>
+                <summary>contrast</summary>
+            </details>
+
+            <details>
+                <summary>drop-shadow</summary>
+                <p>Par exemple, l'image de la lettre F:</p>
+                <code>filter:drop-shadow(0px 50px 50px rgb(251, 3, 168))</code>
+            </details>
+        
+            <details>
+                <summary>grayscale</summary>
+                <p>Par exemple, l'image de la lettre Z</p> 
+                <code> filter:grayscale(200%);</code>
+            </details>
+        
+            <details>
+                <summary>hue-rotate</summary>
+                <p>Par exemple, l'image de la lettre H</p>
+                <code> filter:hue-rotate(180deg);</code>
+            </details>
+        
+            <details>
+                <summary>invert</summary>
+                <p>Par exemple,l'image de la lettre G:</p>
+                <code>filter:invert(100%);</code>
+            </details>
+            
+            <details>
+                <summary>opacity</summary>
+                <p>Par exemple, la lettre J:</p>
+                <code> filter:opacity(90%);</code>
+            </details>
+            
+            <details>
+                <summary>sepia</summary>
+            </details>
+
+            <details>
+                <summary>saturate</summary>
+            </details>
+
+            <details>
+                <summary>url</summary>
+            </details>
+        </div>
+    </div>
+
+    <div class="properties" id="G">
+        <img class="invert" src="./assets/images/Asset 9.png">
+        <div class="prop_list">
+            <h2>G for Gradients </h2>
+            <details>
+                <summary>Gradient</summary>
+                <p> Par exemple, le linear-gradient de mon bouton :</p>
+                <button>Hover me</button>
+                <pre>
+                    <code>
+                        button::after{
+                            content:'';
+                            position: absolute;
+                            height: 107%;
+                            width: 102%;
+                            border-radius: 1000px;
+                            background: red;
+                            background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+                            z-index: -1;
+                        }
+                    </code>
+                </pre>
+            </details>
+        </div>
+    </div>
+
+    <div class="properties" id="H">
+        <img class="hue_rotate" src="./assets/images/Asset 10.png">
+        <h2>H for </h2>
+    </div>
+
+    
+    <div class="properties" id="I">
+        <img class="blur" src="./assets/images/Asset 11.png">
+        <h2>I for ...</h2>
+    </div>
+
+    <div class="properties" id="J">
+        <img class="opacity" src="./assets/images/Asset 12.png">
+        <div class="prop_list">
+        <h2>J for justify </h2>
+        <details>
+            <summary>justify-content</summary>
+            <p>Cette propriété sans laquelle notre vie ne serait définitivement pas la même, permet d'aligner les éléments sur l'axe principal. Cette propriété est utilisé avec un display: flex. En voici un exemple: </p>
+            
+            <div class="justify_exemple">
+                <div class="justify_content">item1</div>
+                <div class="justify_content">item2</div>
+                <div class="justify_content">item3</div>
+            </div>
+            <pre>
+                <code>
+
+                    .justify_exemple{
+                        display: flex;
+                        flex-direction: row;
+                        background-color: var(--secondary-color);
+                        width: fit-content;
+                        gap:1rem;
+                        padding: 1rem;
+                    }
+                
+                    .justify_content{
+                        justify-content: space-evenly;
+                        align-content: center;
+                        background-color: var(--light-pink);
+                        height: 50px;
+                        width: 50px;
+                    }
+                        </code>
+                    </pre>
+
+            <ol>
+                <li>flex-start: aligner au début</li>
+                <li>flex-end: aligner à la fin</li>
+                <li>Center: aligner au centre</li>
+                <li>space-between: met un espace entre les éléments</li>
+                <li>space-around: met un espace autour des éléments</li>
+                <li>space-evenly: qui distribue l'espace également</li>
+            </ol>
+        </details>
+
+   
+        </div>
+    </div>
+
+    <div class="properties" id="K">
+        <img src="./assets/images/Asset 13.png">
+        <h2>K for ...</h2>
+    </div>
+
+    <div class="properties" id="L">
+        <img src="./assets/images/Asset 14.png">
+        <h2>L for ...</h2>
+    </div>
+
+    <div class="properties" id="M">
+        <img src="./assets/images/Asset 15.png">
+        <h2>M for ...</h2>
+    </div>
+
+
+    <div class="properties" id="N">
+        <img src="./assets/images/Asset 16.png">
+        <h2>N for ... </h2>
+    </div>
+
+    <div class="properties" id="O">
+        <img src="./assets/images/Asset 17.png">
+        <div class="prop_list">
+            <h2>O for overflow </h2>      
+            <details>
+                <summary>Overflow</summary>
+                
+                <p>Lorsqu'il s'agit de gérer du contenu qui dépasse la taille de son contenant, c'est la propriété qu'il nous faut. Généralement pour des boîtes à dimensions fixes.</p>
+              
+                <div class="overflow_container">
+                    <div class="overflow_item">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil amet incidunt soluta laudantium et culpa quibusdam voluptatum sapiente quo quidem. Id facilis cupiditate nisi dolores nam est, mollitia officia velit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt dignissimos ipsam tenetur cum distinctio temporibus laudantium non, amet officia fuga. Ut quisquam illo nobis, officia iusto corrupti ipsa consectetur impedit.</p>
+                    </div>
+                </div>
+  
+                <ol>
+                    <li>visible: Lorsque vous souhaitez que le contenu soit affiché même s'il dépasse les dimensions du conteneur</li>
+              
+                    <li>hidden: Lorsque vous souhaitez masquer tout ce qui dépasse les limites du conteneur.</li>
+
+                    <li>scroll: Lorsque vous souhaitez que l'utilisateur puisse défiler pour voir le contenu caché.</li>
+
+                    <li>auto: C'est un compromis, les barres de défilement apparaissent uniquement lorsque le contenu dépasse.</li>
+
+                </ol>
+                
+                <pre>
+                    <code>d
+                        .overflow_container{
+                            width: 200px;
+                            height: 100px;
+                            border: solid var(--primary-bg-color) 2px;
+                            overflow: auto; 
+                            }
+                            
+                        .overflow_item{
+                                width: 300px;
+                                height: 200px;
+                                background-color: var(--secondary-color);
+                            }
+                            
+                    </code>
+                </pre>
+              
+            </details>
+        </div>
+    </div>
+
+    <div class="properties" id="P">
+        <img src="./assets/images/Asset 18.png">
+        <h2>P for ...</h2>
+    </div>
+
+    
+    <div class="properties" id="Q">
+        <img src="./assets/images/Asset 19.png">
+        <h2>Q for ...</h2>
+    </div>
+
+    <div class="properties" id="R">
+        <img src="./assets/images/Asset 20.png">
+        <h2>R for ... </h2>
+    </div>
+
+    
+    <div class="properties" id="S">
+        <img src="./assets/images/Asset 21.png">
+        <h2>S for ...</h2>
+    </div>
+
+    <div class="properties" id="T">
+        <img src="./assets/images/Asset 22.png">
+        <div class="prop_list">
+            <h2>T for transform</h2>
+            <details>
+                <summary>Transform</summary>
+                <p>Animation avec la propriété transform et box-shadow</p>
+                <div class="spinner-1"></div>
+                <pre>
+                    <code>
+                        .spinner-1::before{
+                            position: absolute;
+                            content: "";
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 64px;
+                            color: #323b40;
+                            box-shadow: inset -5px 0 0 5px currentColor;
+                            clip: rect(0, 64px, 32px, o);
+                            animation: rotator 1s infinite ease;
+                        }
+
+                        @keyframes rotator {
+                            0% {
+                                transform: rotate(-180deg);
+                                box-shadow: inset -5px 0 0 5px currentColor;
+                            }
+                            50%{
+                                transform: rotate(0deg);
+                                box-shadow: inset -1px 0 0 1px currentColor;
+                            }
+                        
+                            100%{
+                                transform: rotate(180deg);
+                                box-shadow: inset -5px 0 0 5px currentColor;
+                            }
+                        }
+                    </code>
+                </pre>
+            </details>
+        </div>
+    </div>
+    
+    <div class="properties" id="U">
+        <img src="./assets/images/Asset 23.png">
+        <h2>U for </h2>
+    </div>
+
+
+    <div class="properties" id="V">
+        <img src="./assets/images/Asset 24.png">
+        <h2>V for </h2>
+    </div>
+
+
+    <div class="properties" id="W">
+        <img src="./assets/images/Asset 25.png">
+        <div class="prop_list">
+        <h2>W for writing</h2>
+        <details>
+            <summary>writing-mode</summary>
+            <p>Cette propriété permet de spécifier si les lignes seront écrites à la verticale ou l'horizontale.</p>
+            <div class="writing_exemple">
+                <p>Beach</p>
+            </div>
+            <pre>
+                <code>
+                    .writing_exemple{
+                        text-orientation: upright;
+                    }
+                    
+                    .writing_exemple p{
+                        writing-mode: vertical-lr;
+                        font-size:16px;
+                        float: left;
+                    }   
+                </code>
+            </pre>
+        </details>
+        </div>
+    </div>
+
+    <div class="properties" id="X">
+        <img src="./assets/images/Asset 26.png">
+        <h2>X for ...</h2>
+    </div>
+    
+    <div class="properties" id="Y">
+        <img src="./assets/images/Asset 27.png">
+        <h2>Y for ...</h2>
+    </div>
+
+    <div class="properties" id="Z">
+        <img class="grayscale" src="./assets/images/Asset 28.png">
+        <div class="prop-list">
+            <h2>Z for Z-index</h2>
+            <details>
+                <summary>Z-index</summary>
+                <p>Le z-index est la propriété css permettant de déterminer l'ordre d'empilement des éléments. L'index le plus élévé devrait se retrouver sur le dessus alors que les autres se retrouveront en dessous. En voici, un exemple:</p>
+                <div class="z_index">
+                    <img  id="z_img1"    src="./assets/images/a.png" alt="a">
+                    <img  id="z_img2"    src="./assets/images/b.png" alt="b">
+                    <img  id="z_img3"    src="./assets/images/c.png" alt="c">
+                    <img  id="z_img4"    src="./assets/images/d.png" alt="d">
+                </div>
+                <p>Dans l'exemple plus haut, vous verrez aussi l'utilisation de la propriété <code>transform:translate()</code></p>
+                <pre>
+                    <code>
+                        z_img1{
+                               display: flex;
+                               flex-direction: column;
+                               position: relative;
+                               height: 50px;
+                               width: 50px;
+                               z-index:10;
+                           }
+
+                        z_img2{
+                               display: flex;
+                               flex-direction: column;
+                               position: relative;
+                               height: 50px;
+                               width: 50px;
+                               transform:translate(30px, -40px);
+                               filter: opacity(60%);
+                               z-index:8;
+                           }
+
+                        z_img3{
+                               display: flex;
+                               flex-direction: column;
+                               position: relative;
+                               height: 50px;
+                               width: 50px;
+                               transform: translate(60px, -80px);
+                               filter: opacity(40%);
+                               z-index:6;
+                           }
+
+                        z_img4{
+                               display: flex;
+                               flex-direction: column;
+                               position: relative;
+                               height: 50px;
+                               width: 50px;
+                               transform: translate(90px, -120px);
+                               filter: opacity(20%);
+                               z-index:4;
+                           }
+                    </code>
+                </pre>
+            </details>
+        </div>
+
+    </div>
+            <button class="gotopbtn">
+                <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"> up top</i></a>
+            </button>
+        </main>
+
+        <footer>
+           <h2>Travail réalisé par Marie-Michèle Landry</h2>
+           <date>22 mai 2024</date>
+        </footer>
+    </body>
+</html>
